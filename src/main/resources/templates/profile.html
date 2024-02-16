@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>InsertProfile</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="/home">Legnavi</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarNav">
+		      <ul class="navbar-nav">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="/login">Login</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="/user/profile">Profile</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="/user/product/add">Add Product</a>
+		        </li>
+		        </li>
+		          <li class="nav-item">
+		          <a class="nav-link" href="/updateProducts">Update Product</a>
+		        </li>
+		         <li class="nav-item">
+		          <a class="nav-link" href="/card">Show Products</a>
+		        </li>
+		          <li class="nav-item">
+		          <a class="nav-link" href="/cart">Cart</a>
+		        </li>
+		         <li class="nav-item">
+		          <a class="nav-link" href="/logout">Logout</a>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+		
+		
+		<div class="jumbotron">
+		  <h2 class="lead">Profile Page</h2>
+		  <p>  
+		  <h3  th:text="Welcome + ${fullName}"></h3>
+		  </p>
+		  <hr class="my-4">
+		  <p>Fashion Sale Now Online</p>
+		  <p class="lead">
+		    <a th:href="@{/card}" class="btn btn-primary btn-lg">Browse Products</a>
+		  </p>
+		</div>
+		
+	</body>
+</html>

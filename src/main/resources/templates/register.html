@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<title>RegisterPage</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="/home">Legnavi</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarNav">
+		      <ul class="navbar-nav">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="/login">Login</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="/user/profile">Profile</a>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+		<br>
+		<h2 class="text-center">Registration Form</h2>
+		<br>
+		<br>
+		<div class="container">
+			<div class="d-flex justify-content-center">
+				<form th:action="@{/saveUser}" method="post" th:object="${user}">
+					<div class="form-group">
+				    	<label for="firstName">First Name</label>
+				    	<input type="text" class="form-control" id="firstName" placeholder="Enter First Name" th:field="*{firstName}">
+				  	</div>
+				   	<div class="form-group">
+				    	<label for="lastName">Last Name</label>
+					    <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" th:field="*{lastName}">
+					 </div>
+					 <div class="form-group">
+					    <label for="email">Email address</label>
+					    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" th:field="*{email}">
+					 </div>
+					 <div class="form-group">
+					    <label for="password">Password</label>
+					    <input type="password" class="form-control" id="password" placeholder="Enter Password" th:field="*{password}">
+					 </div>
+				 
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+			<br>
+			<div class="text-center"> Already Registered ? <a href="/login">Login Here</a></div>
+		</div>
+		
+	</body>
+</html>

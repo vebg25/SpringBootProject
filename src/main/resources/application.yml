@@ -1,0 +1,27 @@
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type: TRACE
+      springframework:
+        security: DEBUG
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: vaibhav@25
+    url: jdbc:mysql://localhost:3306/hellouser
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+razorpay:
+  api:
+    key: rzp_test_1TdaBpCkC8PiPN
+    secret: t1Udy0UyUFfynsle0RymJyPd
+    currency: INR
